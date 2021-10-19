@@ -18,7 +18,7 @@ class MyAppBar extends StatelessWidget {
         GestureDetector(
           onTap: ontap,
           child: SizedBox(
-            height: MediaQuery.of(context).size.height * .20,
+            height: MediaQuery.of(context).size.height * .15,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -16,10 +16,16 @@ class ItemMenu extends StatelessWidget {
           top: BorderSide(width: 0.9, color: Colors.white54),
         ),
       ),
-      child: ElevatedButton(
-        style: ButtonStyle(
-            backgroundColor:
-                MaterialStateProperty.all<Color>(Colors.transparent)),
+      // ignore: deprecated_member_use
+      child: RaisedButton(
+        elevation: 0,
+        disabledElevation: 0,
+        focusElevation: 0,
+        hoverElevation: 0,
+        highlightElevation: 0,
+        splashColor: Colors.white,
+        color: Colors.blue[900],
+        highlightColor: Colors.transparent,
         onPressed: () {},
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

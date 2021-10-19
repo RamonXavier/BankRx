@@ -1,3 +1,4 @@
+import 'package:bankrx/pages/home/widgets/item_menu_bottom.widget.dart';
 import 'package:bankrx/pages/home/widgets/menuApp.widget.dart';
 import 'package:bankrx/pages/home/widgets/my_app_bar.widget.dart';
 import 'package:bankrx/pages/home/widgets/my_dots_app.widget.dart';
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MenuApp(
-            top: _screenHeight * .16,
+            top: _screenHeight * .11,
             showMenu: _showMenu,
           ),
           PageViewApp(
@@ -81,6 +82,28 @@ class _HomePageState extends State<HomePage> {
             left: 190,
             currentIndex: _currentIndex,
           ),
+          Positioned(
+            bottom: 0 + MediaQuery.of(context).padding.bottom,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: _screenHeight * 0.14,
+              child: ListView(
+                physics: const BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                children: const <Widget>[
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                  ItemMenuBottom(),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

@@ -14,16 +14,16 @@ class MenuApp extends StatelessWidget {
       left: 0,
       right: 0,
       child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 100),
         opacity: showMenu ? 1 : 0,
         child: SizedBox(
-          height: MediaQuery.of(context).size.height * 0.53,
+          height: MediaQuery.of(context).size.height * 0.63,
           child: Column(
             children: <Widget>[
               Image.network(
                 "https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png",
-                height: 120,
-                width: 120,
+                height: 80,
+                width: 80,
                 color: Colors.white,
               ),
               const Text.rich(
@@ -57,10 +57,42 @@ class MenuApp extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30.0),
                   child: Column(
-                    children: const <Widget>[
-                      ItemMenu(
-                        icon: Icons.info,
-                        text: "Me Ajuda",
+                    children: <Widget>[
+                      const ItemMenu(icon: Icons.info, text: "Me Ajuda"),
+                      const ItemMenu(
+                          icon: Icons.person_outline, text: "Perfil"),
+                      const ItemMenu(
+                          icon: Icons.settings_applications_outlined,
+                          text: "Configurar Conta"),
+                      const ItemMenu(
+                          icon: Icons.credit_card, text: "Configurar Cartão"),
+                      const ItemMenu(icon: Icons.store, text: "Pedir conta PJ"),
+                      const ItemMenu(
+                          icon: Icons.phone_android_sharp,
+                          text: "Configurações do App"),
+                      const SizedBox(height: 25),
+                      Container(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            border:
+                                Border.all(width: 0.7, color: Colors.white54)),
+                        // ignore: deprecated_member_use
+                        child: RaisedButton(
+                          elevation: 0,
+                          disabledElevation: 0,
+                          focusElevation: 0,
+                          hoverElevation: 0,
+                          highlightElevation: 0,
+                          splashColor: Colors.white,
+                          color: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onPressed: () {},
+                          child: const Text(
+                            "SAIR DO APP",
+                            style: TextStyle(fontSize: 12),
+                          ),
+                        ),
                       ),
                     ],
                   ),
