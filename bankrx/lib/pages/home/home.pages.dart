@@ -1,3 +1,4 @@
+import 'package:bankrx/pages/home/widgets/bottomMenu.widget.dart';
 import 'package:bankrx/pages/home/widgets/item_menu_bottom.widget.dart';
 import 'package:bankrx/pages/home/widgets/menuApp.widget.dart';
 import 'package:bankrx/pages/home/widgets/my_app_bar.widget.dart';
@@ -76,54 +77,13 @@ class _HomePageState extends State<HomePage> {
               });
             },
           ),
+          BottomMenu(showMenu: _showMenu),
           MyDotsApp(
             showMenu: _showMenu,
             top: _screenHeight * .67,
             left: 190,
             currentIndex: _currentIndex,
           ),
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 200),
-            bottom: !_showMenu ? 0 + MediaQuery.of(context).padding.bottom : 0,
-            left: 0,
-            right: 0,
-            child: IgnorePointer(
-              ignoring: _showMenu,
-              child: AnimatedOpacity(
-                duration: const Duration(milliseconds: 200),
-                opacity: !_showMenu ? 1 : 0,
-                // ignore: sized_box_for_whitespace
-                child: Container(
-                  height: _screenHeight * 0.15,
-                  child: ListView(
-                    physics: const BouncingScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
-                    children: const <Widget>[
-                      ItemMenuBottom(
-                          icon: Icons.person_add, text: "Indicar Amigos"),
-                      ItemMenuBottom(
-                          icon: Icons.phone_android,
-                          text: "Recarga de celular"),
-                      ItemMenuBottom(icon: Icons.chat, text: "Cobrar"),
-                      ItemMenuBottom(
-                          icon: Icons.monetization_on, text: "Empréstimos"),
-                      ItemMenuBottom(
-                          icon: Icons.move_to_inbox, text: "Depositar"),
-                      ItemMenuBottom(
-                          icon: Icons.mobile_screen_share, text: "Trasnferir"),
-                      ItemMenuBottom(
-                          icon: Icons.format_align_center_rounded,
-                          text: "Ajustar Limite"),
-                      ItemMenuBottom(
-                          icon: Icons.chrome_reader_mode, text: "Pagar"),
-                      ItemMenuBottom(
-                          icon: Icons.lock_open, text: "Bloquear cartão"),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          )
         ],
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:bankrx/pages/home/widgets/card_app.widget.dart';
+import 'package:bankrx/pages/home/widgets/first_card.widged.dart';
 import 'package:flutter/material.dart';
 
 class PageViewApp extends StatelessWidget {
@@ -17,7 +18,7 @@ class PageViewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedPositioned(
-      duration: const Duration(milliseconds: 150),
+      duration: const Duration(milliseconds: 260),
       curve: Curves.easeOut,
       top: top,
       height: MediaQuery.of(context).size.height * .50,
@@ -30,10 +31,10 @@ class PageViewApp extends StatelessWidget {
           physics: showMenu
               ? const NeverScrollableScrollPhysics()
               : const BouncingScrollPhysics(),
-          children: <Widget>[
-            CardApp(),
-            CardApp(),
-            CardApp(),
+          children: const <Widget>[
+            CardApp(child: FirstCard()),
+            CardApp(child: FirstCard()),
+            CardApp(child: FirstCard()),
           ],
         ),
       ),
