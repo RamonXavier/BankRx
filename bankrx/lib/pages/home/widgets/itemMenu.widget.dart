@@ -9,7 +9,7 @@ class ItemMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
+      height: 40,
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(width: 0.9, color: Colors.white54),

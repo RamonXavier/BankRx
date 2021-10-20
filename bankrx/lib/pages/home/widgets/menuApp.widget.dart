@@ -1,4 +1,5 @@
 import 'package:bankrx/pages/home/widgets/itemMenu.widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MenuApp extends StatelessWidget {
@@ -17,7 +18,7 @@ class MenuApp extends StatelessWidget {
         duration: const Duration(milliseconds: 100),
         opacity: showMenu ? 1 : 0,
         child: SizedBox(
-          height: MediaQuery.of(context).size.height * 0.63,
+          height: MediaQuery.of(context).size.height * 0.60,
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
@@ -73,7 +74,7 @@ class MenuApp extends StatelessWidget {
                           text: "Configurações do App"),
                       const SizedBox(height: 25),
                       Container(
-                        height: 35,
+                        height: 45,
                         width: double.infinity,
                         decoration: BoxDecoration(
                             border:
@@ -91,7 +92,8 @@ class MenuApp extends StatelessWidget {
                           onPressed: () {},
                           child: const Text(
                             "SAIR DO APP",
-                            style: TextStyle(fontSize: 12),
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),

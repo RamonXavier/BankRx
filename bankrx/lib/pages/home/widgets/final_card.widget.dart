@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstCard extends StatelessWidget {
-  const FirstCard({Key? key}) : super(key: key);
+class FinalCard extends StatelessWidget {
+  const FinalCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class FirstCard extends StatelessWidget {
                               ),
                               const SizedBox(width: 5),
                               const Text(
-                                "Cartão de crédito",
+                                "Cartão de crédito final",
                                 style:
                                     TextStyle(color: Colors.grey, fontSize: 14),
                               ),
@@ -140,9 +140,10 @@ class FirstCard extends StatelessWidget {
                       Icons.shopping_cart,
                       color: Colors.grey,
                     ),
+                    const SizedBox(width: 4),
                     const Text(
                       "Compra mais recente no supermecado \n no valor de R\$ 124,67",
-                      style: TextStyle(color: Colors.black, fontSize: 14),
+                      style: TextStyle(color: Colors.black, fontSize: 12),
                     ),
                     const Icon(Icons.chevron_right_outlined,
                         color: Colors.grey, size: 18)
