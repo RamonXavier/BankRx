@@ -27,7 +27,7 @@ class _ThirdCardState extends State<ThirdCard> {
           Column(
             children: [
               const Text(
-                "Nubank Rewards",
+                "BANK-RX Rewards",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,

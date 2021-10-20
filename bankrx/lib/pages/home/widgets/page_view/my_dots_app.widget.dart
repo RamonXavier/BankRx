@@ -28,7 +28,7 @@ class MyDotsApp extends StatelessWidget {
         child: Row(
           children: <Widget>[
             AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 200),
               height: 7,
               width: 7,
               decoration:

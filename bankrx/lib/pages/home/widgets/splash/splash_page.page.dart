@@ -1,3 +1,4 @@
+import 'package:bankrx/pages/home/home.pages.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -8,6 +9,26 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    delaySplash();
+  }
+
+  Future<void> delaySplash() async {
+    return await Future.delayed(const Duration(seconds: 2), () {
+      setState(() {
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(pageBuilder: (BuildContext context,
+              Animation animation, Animation secondAnimation) {
+            return const HomePage();
+          }),
+        );
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
