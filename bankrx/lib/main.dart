@@ -1,11 +1,13 @@
-import 'package:bankrx/pages/home/home.pages.dart';
+import 'package:bankrx/pages/home/widgets/splash/splash_page.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
+    SystemUiOverlayStyle(
       statusBarBrightness: Brightness.dark,
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.blue.shade800,
     ),
   );
   runApp(const MyApp());
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       home: const SafeArea(
-        child: HomePage(),
+        child: SplashPage(),
       ),
     );
   }
