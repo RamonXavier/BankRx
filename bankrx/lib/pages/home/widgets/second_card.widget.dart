@@ -1,7 +1,17 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-class SecondCard extends StatelessWidget {
+class SecondCard extends StatefulWidget {
   const SecondCard({Key? key}) : super(key: key);
+
+  @override
+  State<SecondCard> createState() => _SecondCardState();
+}
+
+class _SecondCardState extends State<SecondCard>
+    with AutomaticKeepAliveClientMixin {
+  bool _showSaldo = false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +47,21 @@ class SecondCard extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Icon(
-                          Icons.visibility,
-                          color: Colors.grey,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _showSaldo = !_showSaldo;
+                            });
+                          },
+                          child: !_showSaldo
+                              ? const Icon(
+                                  Icons.visibility_off,
+                                  color: Colors.grey,
+                                )
+                              : const Icon(
+                                  Icons.visibility,
+                                  color: Colors.grey,
+                                ),
                         )
                       ],
                     ),
@@ -60,13 +82,20 @@ class SecondCard extends StatelessWidget {
                               fontSize: 13,
                             ),
                           ),
-                          const Text.rich(
-                            TextSpan(
-                              text: "R\$4.234,09",
-                            ),
-                            textAlign: TextAlign.start,
-                            style: TextStyle(color: Colors.black, fontSize: 28),
-                          ),
+                          _showSaldo
+                              ? const Text.rich(
+                                  TextSpan(
+                                    text: "R\$4.234,09",
+                                  ),
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 28),
+                                )
+                              : Container(
+                                  height: 32,
+                                  width: 160,
+                                  color: Colors.black.withOpacity(0.1),
+                                ),
                         ],
                       ),
                     ),
@@ -108,4 +137,7 @@ class SecondCard extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

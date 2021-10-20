@@ -1,5 +1,5 @@
 import 'package:bankrx/pages/home/widgets/card_app.widget.dart';
-import 'package:bankrx/pages/home/widgets/final_card.widget.dart';
+import 'package:bankrx/pages/home/widgets/third_card.widget.dart';
 import 'package:bankrx/pages/home/widgets/first_card.widged.dart';
 import 'package:bankrx/pages/home/widgets/second_card.widget.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class PageViewApp extends StatelessWidget {
           children: const <Widget>[
             CardApp(child: FirstCard()),
             CardApp(child: SecondCard()),
-            CardApp(child: FinalCard()),
+            CardApp(child: ThirdCard()),
           ],
         ),
       ),
