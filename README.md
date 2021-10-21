@@ -20,12 +20,12 @@ minha versão de aplicativo está um pouco diferente nas lógicas, aparências e
 Para desenvolvimento da plataforma foram utilizados algumas tecnologias: 
 
 # Desenvolvimento Mobile:
- - Dart;
- - Flutter;
+ 	- Dart;
+ 	- Flutter;
 
 # Ferramentas:
 	-Para edição de texto e a programação em si foi utilizada a IDE Visual Studio Code;
-  -Para rodar a aplicação em abiente teste foi usado o AVD (android studio) e Smartphone Xiaomi MI A3 físico;
+  	-Para rodar a aplicação em abiente teste foi usado o AVD (android studio) e Smartphone Xiaomi MI A3 físico;
  
 
 # Contato: 
