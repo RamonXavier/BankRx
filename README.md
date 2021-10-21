@@ -2,11 +2,11 @@
 
 # Como Executar:
 
-1 - Instalação do Flutter: <a href="https://flutter.dev/docs/get-started/install">Instale aqui</a>.
-2 - Plugue seu smartphone ou abra o emulador android instalado;
-3 - Compile a aplicação usando o android (passo anterior) pela sua IDE de preferência;
+1 - Instalação do Flutter: <a href="https://flutter.dev/docs/get-started/install">Instale aqui</a>. <br>
+2 - Plugue seu smartphone ou abra o emulador android instalado.<br>
+3 - Compile a aplicação usando o android (passo anterior) pela sua IDE de preferência.<br>
 
-ou
+ou<br>
 Simplesmente instale o APK em seu smartphone android :)
 O arquivo está na raiz do repositório.
 
